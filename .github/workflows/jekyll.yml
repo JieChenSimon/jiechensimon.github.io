@@ -1,40 +1,85 @@
-name: Jekyll Build
+name: Deploy Jekyll site to Pages
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      # Checkout the repository
+      # 检出代码
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      # Set up Ruby
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.1 # 指定 Ruby 版本，根据你的项目需要选择合适版本
-          bundler-cache: true # 启用 Bundler 缓存
-
-      # Install dependencies
-      - name: Install dependencies
+      # 安装 rbenv 和 ruby-build
+      - name: Install rbenv and ruby-build
         run: |
-          gem install rexml # 安装 rexml 解决 kramdown 的依赖问题
+          sudo apt-get update
+          sudo apt-get install -y rbenv
+          curl -fsSL https://github.com/rbenv/ruby-build/archive/refs/heads/master.tar.gz | tar -xz
+          sudo mv ruby-build-master /usr/local/share/ruby-build
+          sudo ln -s /usr/local/share/ruby-build/bin/ruby-build /usr/local/bin/ruby-build
+      
+      # 手动安装 Ruby 3.1.4
+      - name: Install Ruby 3.1.4
+        run: |
+          ruby-build 3.1.4 /opt/hostedtoolcache/Ruby/3.1.4/x64
+          touch /opt/hostedtoolcache/Ruby/3.1.4/x64.complete
+      
+      # 配置 PATH
+      - name: Setup Ruby Path
+        run: echo "/opt/hostedtoolcache/Ruby/3.1.4/x64/bin" >> $GITHUB_PATH
+
+      # 验证 Ruby 是否正确安装
+      - name: Verify Ruby Installation
+        run: |
+          ruby -v
+          gem -v
+
+      # 安装 rexml
+      - name: Install rexml Gem
+        run: gem install rexml
+
+      # 安装 Bundler 并缓存 Gems
+      - name: Install dependencies with Bundler
+        run: |
+          gem install bundler
           bundle install
 
-      # Build the Jekyll site
-      - name: Build the Jekyll site
-        run: bundle exec jekyll build --baseurl ""
+      # 配置 Pages
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
 
-      # Upload the built site as an artifact (可选，用于调试)
-      - name: Upload site artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: _site
-          path: _site
+      # 使用 Jekyll 构建站点
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+
+      # 上传构建的站点作为 artifact
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      # 部署到 GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
