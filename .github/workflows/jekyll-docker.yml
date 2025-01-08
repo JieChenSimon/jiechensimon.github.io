@@ -26,4 +26,4 @@ jobs:
             bundle config set --local path 'vendor/bundle' && \
             bundle add rexml && \
             bundle install && \
-            bundle exec jekyll build --future --safe --exclude vendor/bundle"
+            JEKYLL_ENV=production bundle exec jekyll build --future --safe"
