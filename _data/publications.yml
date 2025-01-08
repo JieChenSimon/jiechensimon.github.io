@@ -11,7 +11,7 @@ main:
     notes: Main Conference-TBA
 
   - title: "Tor Trace in Images: A Novel Multi-tab Website Fingerprinting Attack with Object Detection"
-    authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
+    authors: Yifan Xu, Liangmin Wang, <strong>Jie Chenu</strong>, Qiang Zhou
     # conference_short: CVPR
     conference: The Computer Journal, 2024.
     pdf: https://academic.oup.com/comjnl/article-abstract/67/8/2690/7664604
