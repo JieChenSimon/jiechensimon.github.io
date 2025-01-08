@@ -1,7 +1,7 @@
 main:
 
   - title: "CLEP: A Novel Contrastive Learning Method for Evolutionary Reentrancy Vulnerability Detection."
-    authors: <strong>Jie Chen*</strong>, Liangmin Wang, Huijuan Zhu, Victor S. Sheng
+    authors: <strong>Jie Chen</strong>, Liangmin Wang, Huijuan Zhu, Victor S. Sheng
     conference_short: AAAI
     conference: The Association for the Advancement of Artificial Intelligence <strong>(AAAI)</strong>, 2025.
     pdf: https://arxiv.org/pdf/2306.00988.pdf
