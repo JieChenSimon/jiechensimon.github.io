@@ -45,7 +45,7 @@ main:
 
 
   - title: "A Lightweight Locally Repairable Code-based Storage Architecture for Blockchains"
-    authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
+    authors: Wanning Bao, Liangmin Wang, <strong>Jie Chen</strong>
     conference_short: PriComp
     conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
     pdf: https://ieeexplore.ieee.org/abstract/document/10189448/
