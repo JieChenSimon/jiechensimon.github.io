@@ -27,3 +27,11 @@ jobs:
             bundle add rexml && \
             bundle install && \
             JEKYLL_ENV=production bundle exec jekyll build --future --safe"
+      
+      # 部署到 GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          enable_jekyll: false    # 已经构建过了，不需要 GitHub Pages 再次构建
