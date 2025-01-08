@@ -33,10 +33,10 @@ main:
     image: ./assets/img/teaser_example.png
 
   - title: "Smart Contract Vulnerability Detection Based on Prompt-guided ChatGPT"
-    authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
+    authors: Jiarun Ma, Shiling Feng, Jiahao Zeng, Jia Lu, <strong>Jie Chen</strong>
     conference_short: NaNa
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
-    pdf: https://arxiv.org/pdf/2002.10211.pdf
+    conference: International Conference on Networking and Network Applications <strong>(NaNa)</strong>, 2024.
+    pdf: https://ieeexplore.ieee.org/abstract/document/10679877
     code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     page: https://class-il.mpi-inf.mpg.de/mnemonics/
     bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
