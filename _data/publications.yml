@@ -47,7 +47,7 @@ main:
   - title: "A Lightweight Locally Repairable Code-based Storage Architecture for Blockchains"
     authors: Wanning Bao, Liangmin Wang, <strong>Jie Chen</strong>
     conference_short: PriComp
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
+    conference: IEEE Smartworld, Ubiquitous Intelligence & Computing, Scalable Computing & Communications, Digital Twin, Privacy Computing, Metaverse, Autonomous & Trusted Vehicles <strong>(PriComp)</strong>, 2022.
     pdf: https://ieeexplore.ieee.org/abstract/document/10189448/
     # code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
