@@ -23,7 +23,7 @@ main:
     image: ./assets/img/teaser_example.png
 
   - title: "Randomly Wired Graph Neural Network for Chinese NER"
-    authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
+    authors: <strong>Jie Chen</strong>, Xuefeng Xi, Victor S Sheng, Zhiming Cui
     conference_short: ESWA
     conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
     pdf: https://arxiv.org/pdf/2002.10211.pdf
