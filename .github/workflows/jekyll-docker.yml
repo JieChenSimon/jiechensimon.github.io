@@ -1,4 +1,4 @@
-name: Jekyll site CI
+name: Jekyll Site CI
 
 on:
   push:
@@ -8,13 +8,27 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+      # 检出代码
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 使用 jekyll/builder 容器构建站点
+      - name: Build the Jekyll site using Docker
+        run: |
+          docker run \
+          -v ${{ github.workspace }}:/srv/jekyll \
+          -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+          jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+
+      # 上传构建的站点作为 artifact（可选）
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: _site
+          path: _site
+
+      # （可选）运行测试或部署
+      # 这里可以添加其他步骤，如 HTML 验证、部署到 Pages 等。
