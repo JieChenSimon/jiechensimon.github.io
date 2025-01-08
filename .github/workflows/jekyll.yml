@@ -47,6 +47,10 @@ jobs:
           ruby -v
           gem -v
 
+      # 安装 rexml
+      - name: Install rexml Gem
+        run: gem install rexml
+
       # 安装 Bundler 并缓存 Gems
       - name: Install dependencies with Bundler
         run: |
