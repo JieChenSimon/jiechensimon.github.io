@@ -3,18 +3,17 @@ main:
   - title: "CLEP: A Novel Contrastive Learning Method for Evolutionary Reentrancy Vulnerability Detection."
     authors: <strong>Jie Chen</strong>, Liangmin Wang, Huijuan Zhu, Victor S. Sheng
     conference_short: AAAI
-    conference: The Association for the Advancement of Artificial Intelligence <strong>(AAAI)</strong>, 2025.
+    conference: The Association for the Advancement of Artificial Intelligence <strong>(AAAI)</strong>, 2025. [CCF-A]
     pdf: https://arxiv.org/pdf/2306.00988.pdf
     code: https://github.com/MrGiovanni/ContinualLearning
     bibtex: https://bib.yliu.me/MICCAI23.txt
     image: ./assets/img/teaser_example_2.png
-    rank: CCF-A
     notes: Main Conference-TBA
 
   - title: "Tor Trace in Images: A Novel Multi-tab Website Fingerprinting Attack with Object Detection"
     authors: Yifan Xu, Liangmin Wang, <strong>Jie Chenu</strong>, Qiang Zhou
     # conference_short: CVPR
-    conference: The Computer Journal, 2024.
+    conference: The Computer Journal, 2024. [CCF-B]
     pdf: https://academic.oup.com/comjnl/article-abstract/67/8/2690/7664604
     code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     page: https://class-il.mpi-inf.mpg.de/mnemonics/
@@ -25,7 +24,7 @@ main:
   - title: "Randomly Wired Graph Neural Network for Chinese NER"
     authors: <strong>Jie Chen</strong>, Xuefeng Xi, Victor S Sheng, Zhiming Cui
     conference_short: ESWA
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
+    conference: Expert Systems with Applications <strong>(ESWA)</strong>, 2024. [JCR-Q1]
     pdf: https://arxiv.org/pdf/2002.10211.pdf
     code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     page: https://class-il.mpi-inf.mpg.de/mnemonics/
