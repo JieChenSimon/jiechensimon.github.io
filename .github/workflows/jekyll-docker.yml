@@ -23,5 +23,5 @@ jobs:
           -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
           jekyll/builder:latest /bin/bash -c "\
             chmod -R 777 /srv/jekyll && \
-            gem install rexml && \
+            bundle install && \
             jekyll build --future"
