@@ -17,39 +17,54 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-24.04 # 或 ubuntu-latest，视环境而定
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
+
+      # 安装 rbenv 和 ruby-build
+      - name: Install rbenv and ruby-build
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y rbenv
+          curl -fsSL https://github.com/rbenv/ruby-build/archive/refs/heads/master.tar.gz | tar -xz
+          sudo mv ruby-build-master /usr/local/share/ruby-build
+          sudo ln -s /usr/local/share/ruby-build/bin/ruby-build /usr/local/bin/ruby-build
       
-      # 手动安装 Ruby
+      # 手动安装 Ruby 3.1.4
       - name: Install Ruby 3.1.4
         run: |
           ruby-build 3.1.4 /opt/hostedtoolcache/Ruby/3.1.4/x64
           touch /opt/hostedtoolcache/Ruby/3.1.4/x64.complete
-        env:
-          RBENV_VERSION: 3.1.4
       
-      # 配置 PATH，确保 Ruby 可用
+      # 配置 PATH
       - name: Setup Ruby Path
         run: echo "/opt/hostedtoolcache/Ruby/3.1.4/x64/bin" >> $GITHUB_PATH
 
-      - name: Setup Ruby Bundler Cache
-        uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42
-        with:
-          ruby-version: '3.1.4'
-          bundler-cache: true
-          cache-version: 0
+      # 验证 Ruby 是否正确安装
+      - name: Verify Ruby Installation
+        run: |
+          ruby -v
+          gem -v
 
+      # 安装 Bundler 并缓存 Gems
+      - name: Install dependencies with Bundler
+        run: |
+          gem install bundler
+          bundle install
+
+      # 配置 Pages
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
 
+      # 使用 Jekyll 构建站点
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
 
+      # 上传构建的站点作为 artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
@@ -60,6 +75,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      # 部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
