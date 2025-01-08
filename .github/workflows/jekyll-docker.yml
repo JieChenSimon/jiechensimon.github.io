@@ -9,12 +9,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       # 检出代码
       - name: Checkout repository
         uses: actions/checkout@v4
-
+        
       # 使用 jekyll/builder 容器构建站点
       - name: Build the Jekyll site using Docker
         run: |
@@ -25,6 +24,6 @@ jobs:
             chmod -R 777 /srv/jekyll && \
             gem install bundler && \
             bundle config set --local path 'vendor/bundle' && \
-            gem install rexml && \
+            bundle add rexml && \
             bundle install && \
-            jekyll build --future"
+            bundle exec jekyll build --future"
