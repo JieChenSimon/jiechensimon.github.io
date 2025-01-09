@@ -40,9 +40,9 @@
       {{ link.others }}
       {% endif %}
 
-      {% if link.rank %}
+      {% if rank %}
       <strong>
-        <i style="color:#27ae60; font-size:12px;">Rank: {{ link.rank }}</i>
+        <i style="color:#27ae60; font-size:12px;">Rank: {{ rank }}</i>
       </strong>
       {% endif %}
     </div>
