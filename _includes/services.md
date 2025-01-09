@@ -7,7 +7,7 @@
   <li><a href="https://2023.aclweb.org/"><autocolor>Conference on Empirical Methods in Natural Language Processing (EMNLP) 2023</autocolor></a></li>
   <li><a href="hhttps://2023.eacl.org/"><autocolor>The European Chapter of the ACL (EACL) 2023</autocolor></a></li>
   <li><a href="https://2024.emnlp.org/"><autocolor>Empirical Methods in Natural Language Processing (EMNLP) 2021-2023</autocolor></a></li>
-  <li><a href="https://eccv2022.ecva.net/"><autocolor>European Conference on Computer Vision (ECCV) 2022</autocolor></a></li>
+  <li><a href="https://coling2022.org/"><autocolor>International Conference on Computational Linguistics  (COLING) 2022</autocolor></a></li>
 </ul>
 
 <h4 style="margin:0 10px 0;">Journal Reviewers</h4>
