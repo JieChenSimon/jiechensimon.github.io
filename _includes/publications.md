@@ -21,6 +21,9 @@
       <div class="periodical"><em>{{ link.conference }}</em>
       </div>
     <div class="links">
+      {% if link.rank %}
+      <span class="btn btn-sm z-depth-0" style="font-size:12px; border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">{{ link.rank }}</span>
+      {% endif %}
       {% if link.pdf %} 
       <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
       {% endif %}
@@ -38,9 +41,6 @@
       {% endif %}
       {% if link.others %} 
       {{ link.others }}
-      {% endif %}
-      {% if link.rank %}
-      <span class="btn btn-sm z-depth-0" style="font-size:12px; border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">{{ link.rank }}</span>
       {% endif %}
     </div>
   </div>
