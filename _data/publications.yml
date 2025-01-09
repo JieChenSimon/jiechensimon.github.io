@@ -9,7 +9,7 @@ main:
     bibtex: https://bib.yliu.me/MICCAI23.txt
     rank: CCF-A
     image: ./assets/img/CLEP.png
-    notes: Main Conference-TBA
+    notes: Main Conference-Accepted-TBA
 
   - title: "SmartGuard: Making Prediction Verifiable through Transaction Sequences on Smart Contract Vulnerability Detection."
     authors: <strong>Jie Chen</strong>, Liangmin Wang, Huijuan Zhu, Victor S. Sheng
@@ -20,7 +20,7 @@ main:
     # bibtex: https://bib.yliu.me/MICCAI23.txt
     rank: CCF-A
     image: ./assets/img/teaser_example_2.png
-    notes: Submitted
+    notes: Under Review
 
   - title: "Tor Trace in Images: A Novel Multi-tab Website Fingerprinting Attack with Object Detection"
     authors: Yifan Xu, Liangmin Wang, <strong>Jie Chen</strong>, Qiang Zhou
