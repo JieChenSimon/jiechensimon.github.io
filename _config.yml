@@ -13,11 +13,12 @@ canonical: https://minimal-light-theme.yliu.me/
 # Links 
 # If you don't need one of them, you may delete the corresponding line.
 google_scholar: https://scholar.google.com/citations?user=29wfilcAAAAJ&hl=en/
-cv_link: assets/files/curriculum_vitae.pdf
+# cv_link: assets/files/curriculum_vitae.pdf
 github_link: https://github.com/JieChenSimon/
-linkedin: https://www.linkedin.com/
+# linkedin: https://www.linkedin.com/
 twitter: https://twitter.com/
 wordpress: https://your-wordpress-site.com
+csdn: https://blog.csdn.net/qq_40199232?spm=1011.2124.3001.5343
 
 # Images (e.g., your profile picture and your website's favicon) 
 # "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
