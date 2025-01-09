@@ -15,8 +15,8 @@ main:
     conference_short: TIFS
     conference: IEEE Transactions on Information Forensics and Security <strong>(TIFS)</strong>, 2024.
     # pdf: https://arxiv.org/pdf/2306.00988.pdf
-    code: https://github.com/MrGiovanni/ContinualLearning
-    bibtex: https://bib.yliu.me/MICCAI23.txt
+    # code: https://github.com/MrGiovanni/ContinualLearning
+    # bibtex: https://bib.yliu.me/MICCAI23.txt
     image: ./assets/img/teaser_example_2.png
     notes: Submitted
 
@@ -68,7 +68,7 @@ main:
 
   - title: "A survey of deep learning for electronic health records"
     authors: Jiabao Xu, Xuefeng Xi, <strong>Jie Chen</strong>, Victor S Sheng, Jieming Ma, Zhiming Cui
-    conference_short: CVPR
+    conference_short: Applied Sciences
     conference: Applied Sciences, 2022.
     pdf: https://www.mdpi.com/2076-3417/12/22/11709
     # code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
