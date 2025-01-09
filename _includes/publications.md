@@ -22,7 +22,7 @@
       </div>
     <div class="links">
       {% if link.rank %}
-      <span class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">{{ link.rank }}</span>
+      <a href="#" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">{{ link.rank }}</a>
       {% endif %}
       {% if link.pdf %} 
       <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
