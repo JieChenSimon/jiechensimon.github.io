@@ -12,7 +12,7 @@ main:
 
   - title: "Tor Trace in Images: A Novel Multi-tab Website Fingerprinting Attack with Object Detection"
     authors: Yifan Xu, Liangmin Wang, <strong>Jie Chen</strong>, Qiang Zhou
-    # conference_short: CVPR
+    conference_short: Computer Journal
     conference: The Computer Journal, 2024. [CCF-B]
     pdf: https://academic.oup.com/comjnl/article-abstract/67/8/2690/7664604
     code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
@@ -58,7 +58,7 @@ main:
 
   - title: "A survey of deep learning for electronic health records"
     authors: Jiabao Xu, Xuefeng Xi, <strong>Jie Chen</strong>, Victor S Sheng, Jieming Ma, Zhiming Cui
-    # conference_short: CVPR
+    conference_short: CVPR
     conference: Applied Sciences, 2022.
     pdf: https://www.mdpi.com/2076-3417/12/22/11709
     # code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
