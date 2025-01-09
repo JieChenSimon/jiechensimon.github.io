@@ -3,7 +3,7 @@ main:
   - title: "CLEP: A Novel Contrastive Learning Method for Evolutionary Reentrancy Vulnerability Detection"
     authors: <strong>Jie Chen</strong>, Liangmin Wang, Huijuan Zhu, Victor S. Sheng
     conference_short: AAAI
-    conference: The Association for the Advancement of Artificial Intelligence <strong>(AAAI)</strong>, 2025. [CCF-A]
+    conference: The Association for the Advancement of Artificial Intelligence <strong>(AAAI)</strong>, 2025.
     # pdf: https://arxiv.org/pdf/2306.00988.pdf
     code: https://github.com/MrGiovanni/ContinualLearning
     bibtex: https://bib.yliu.me/MICCAI23.txt
@@ -30,6 +30,7 @@ main:
     code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     page: https://class-il.mpi-inf.mpg.de/mnemonics/
     bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
+    rank: CCF-B
     notes: Oral Presentation
     image: ./assets/img/tor.png
 
@@ -41,6 +42,7 @@ main:
     code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     page: https://class-il.mpi-inf.mpg.de/mnemonics/
     bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
+    rank: JCR-Q1
     notes: Oral Presentation
     image: ./assets/img/ESWA.png
 
