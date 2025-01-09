@@ -43,7 +43,7 @@ main:
     page: https://class-il.mpi-inf.mpg.de/mnemonics/
     bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     rank: JCR-Q1
-    notes: Oral Presentation
+    # notes: Oral Presentation
     image: ./assets/img/ESWA.png
 
   - title: "Smart Contract Vulnerability Detection Based on Prompt-guided ChatGPT"
