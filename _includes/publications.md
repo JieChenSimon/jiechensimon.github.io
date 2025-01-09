@@ -39,11 +39,8 @@
       {% if link.others %} 
       {{ link.others }}
       {% endif %}
-
-      {% if rank %}
-      <strong>
-        <i style="color:#27ae60; font-size:12px;">Rank: {{ rank }}</i>
-      </strong>
+      {% if link.rank %}
+      <span class="btn btn-sm z-depth-0" style="font-size:12px; border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">{{ link.rank }}</span>
       {% endif %}
     </div>
   </div>
