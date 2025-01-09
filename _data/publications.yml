@@ -25,7 +25,7 @@ main:
   - title: "Tor Trace in Images: A Novel Multi-tab Website Fingerprinting Attack with Object Detection"
     authors: Yifan Xu, Liangmin Wang, <strong>Jie Chen</strong>, Qiang Zhou
     conference_short: Computer Journal
-    conference: The Computer Journal, 2024. [CCF-B]
+    conference: The Computer Journal, 2024.
     pdf: https://academic.oup.com/comjnl/article-abstract/67/8/2690/7664604
     code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     page: https://class-il.mpi-inf.mpg.de/mnemonics/
@@ -37,7 +37,7 @@ main:
   - title: "Randomly Wired Graph Neural Network for Chinese NER"
     authors: <strong>Jie Chen</strong>, Xuefeng Xi, Victor S Sheng, Zhiming Cui
     conference_short: ESWA
-    conference: Expert Systems with Applications <strong>(ESWA)</strong>, 2024. [JCR-Q1]
+    conference: Expert Systems with Applications <strong>(ESWA)</strong>, 2024.
     pdf: https://arxiv.org/pdf/2002.10211.pdf
     code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     page: https://class-il.mpi-inf.mpg.de/mnemonics/
