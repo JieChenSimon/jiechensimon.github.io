@@ -1,6 +1,6 @@
 main:
 
-  - title: "CLEP: A Novel Contrastive Learning Method for Evolutionary Reentrancy Vulnerability Detection."
+  - title: "CLEP: A Novel Contrastive Learning Method for Evolutionary Reentrancy Vulnerability Detection"
     authors: <strong>Jie Chen</strong>, Liangmin Wang, Huijuan Zhu, Victor S. Sheng
     conference_short: AAAI
     conference: The Association for the Advancement of Artificial Intelligence <strong>(AAAI)</strong>, 2025. [CCF-A]
@@ -9,6 +9,16 @@ main:
     bibtex: https://bib.yliu.me/MICCAI23.txt
     image: ./assets/img/teaser_example_2.png
     notes: Main Conference-TBA
+
+  - title: "SmartGuard: Making Prediction Verifiable through Transaction Sequences on Smart Contract Vulnerability Detection."
+    authors: <strong>Jie Chen</strong>, Liangmin Wang, Huijuan Zhu, Victor S. Sheng
+    conference_short: TIFS
+    conference: IEEE Transactions on Information Forensics and Security <strong>(TIFS)</strong>, 2024.
+    # pdf: https://arxiv.org/pdf/2306.00988.pdf
+    code: https://github.com/MrGiovanni/ContinualLearning
+    bibtex: https://bib.yliu.me/MICCAI23.txt
+    image: ./assets/img/teaser_example_2.png
+    notes: Submitted
 
   - title: "Tor Trace in Images: A Novel Multi-tab Website Fingerprinting Attack with Object Detection"
     authors: Yifan Xu, Liangmin Wang, <strong>Jie Chen</strong>, Qiang Zhou
