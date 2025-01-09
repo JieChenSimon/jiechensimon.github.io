@@ -17,6 +17,7 @@ main:
     # pdf: https://arxiv.org/pdf/2306.00988.pdf
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
+    Early Accept: 2024
     image: ./assets/img/teaser_example_2.png
     notes: Submitted
 
@@ -29,7 +30,6 @@ main:
     page: https://class-il.mpi-inf.mpg.de/mnemonics/
     bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     notes: Oral Presentation
-    Early Accept: 2024
     image: ./assets/img/teaser_example.png
 
   - title: "Randomly Wired Graph Neural Network for Chinese NER"
