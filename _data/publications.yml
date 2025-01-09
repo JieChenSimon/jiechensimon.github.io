@@ -29,6 +29,7 @@ main:
     page: https://class-il.mpi-inf.mpg.de/mnemonics/
     bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     notes: Oral Presentation
+    Early Accept: 2024
     image: ./assets/img/teaser_example.png
 
   - title: "Randomly Wired Graph Neural Network for Chinese NER"
