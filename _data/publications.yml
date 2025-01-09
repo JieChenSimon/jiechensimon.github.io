@@ -31,7 +31,7 @@ main:
     page: https://class-il.mpi-inf.mpg.de/mnemonics/
     bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     notes: Oral Presentation
-    image: ./assets/img/teaser_example.png
+    image: ./assets/img/tor.png
 
   - title: "Randomly Wired Graph Neural Network for Chinese NER"
     authors: <strong>Jie Chen</strong>, Xuefeng Xi, Victor S Sheng, Zhiming Cui
@@ -42,7 +42,7 @@ main:
     page: https://class-il.mpi-inf.mpg.de/mnemonics/
     bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     notes: Oral Presentation
-    image: ./assets/img/teaser_example.png
+    image: ./assets/img/ESWA.png
 
   - title: "Smart Contract Vulnerability Detection Based on Prompt-guided ChatGPT"
     authors: Jiarun Ma, Shiling Feng, Jiahao Zeng, Jia Lu, <strong>Jie Chen</strong>
