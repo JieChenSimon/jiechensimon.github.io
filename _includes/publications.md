@@ -39,6 +39,12 @@
       {% if link.others %} 
       {{ link.others }}
       {% endif %}
+
+      {% if link.rank %}
+      <strong>
+        <i style="color:#27ae60; font-size:12px;">Rank: {{ link.rank }}</i>
+      </strong>
+      {% endif %}
     </div>
   </div>
 </div>
