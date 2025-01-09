@@ -4,7 +4,7 @@
 
 <ul style="margin:0 0 5px;">
   <li><a href="https://2023.aclweb.org/"><autocolor>Annual Meeting of the Association for Computational Linguistics (ACL) 2023</autocolor></a></li>
-  <li><a href="https://2023.aclweb.org/"><autocolor>Conference on Empirical Methods in Natural Language Processing (EMNLP) 2023</autocolor></a></li>
+  <li><a href="https://aaai.org/"><autocolor>The Association for the Advancement of Artificial Intelligence (AAAI) 2023-2024</autocolor></a></li>
   <li><a href="hhttps://2023.eacl.org/"><autocolor>The European Chapter of the ACL (EACL) 2023</autocolor></a></li>
   <li><a href="https://2024.emnlp.org/"><autocolor>Empirical Methods in Natural Language Processing (EMNLP) 2021-2023</autocolor></a></li>
   <li><a href="https://coling2022.org/"><autocolor>International Conference on Computational Linguistics  (COLING) 2022</autocolor></a></li>
