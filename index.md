@@ -9,7 +9,7 @@ I am a Ph.D. student at Southeast University. I am interested in software testin
 ## Research Interests
 - **Security:** software testing, smart contract security, vulnerability detection
 - **Natural Language Processing:** named entity recognition, relation extraction, event extraction
-- **Machine Learning:** large Language model (LLM), interpretability, transfer learning
+- **Machine Learning:** large Language model (LLM), interpretability, AI Agent
 
 ## News
 
