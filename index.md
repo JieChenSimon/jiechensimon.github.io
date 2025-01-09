@@ -8,8 +8,8 @@ I am a Ph.D. student at Southeast University.
 
 ## Research Interests
 - **Security:** software testing, smart contract security, vulnerability detection
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
+- **Natural Language Processing:** image recognition, image generation, video captioning
+- **Machine Learning:** Large Language model (LLM), Interpretability, transfer learning
 
 ## News
 
