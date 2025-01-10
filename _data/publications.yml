@@ -76,7 +76,7 @@ main:
     conference: Applied Sciences, 2022.
     pdf: https://www.mdpi.com/2076-3417/12/22/11709
     # code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
-    page: https://class-il.mpi-inf.mpg.de/mnemonics/
+    # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     bibtex: https://reurl.cc/d1Oj38
     # notes: Oral Presentation
     image: ./assets/img/ehr.png
