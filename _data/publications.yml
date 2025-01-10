@@ -29,7 +29,7 @@ main:
     pdf: https://academic.oup.com/comjnl/article-abstract/67/8/2690/7664604
     code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
+    bibtex: https://dblp.org/rec/journals/cj/XuWCZ24.html?view=bibtex
     rank: CCF-B
     notes: Oral Presentation
     image: ./assets/img/tor.png
@@ -41,7 +41,7 @@ main:
     pdf: https://arxiv.org/pdf/2002.10211.pdf
     code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
+    bibtex: https://dblp.org/rec/journals/eswa/ChenXSC23.html?view=bibtex
     rank: JCR-Q1
     # notes: Oral Presentation
     image: ./assets/img/ESWA.png
@@ -65,7 +65,7 @@ main:
     pdf: https://ieeexplore.ieee.org/abstract/document/10189448/
     # code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
+    bibtex: https://dblp.org/rec/conf/uic/BaoWC22.html?view=bibtex
     # notes: Oral Presentation
     image: ./assets/img/pri.png
 
@@ -77,6 +77,17 @@ main:
     pdf: https://www.mdpi.com/2076-3417/12/22/11709
     # code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
+    bibtex: https://reurl.cc/d1Oj38
     # notes: Oral Presentation
     image: ./assets/img/ehr.png
+
+  - title: "Interpreting Randomly Wired Graph Models for Chinese NER"
+    authors: <strong>Jie Chen</strong>, Jiabao Xu, Xuefeng Xi, Zhiming Cui, Victor S Sheng
+    conference_short: CMES
+    conference: CMES-COMPUTER MODELING IN ENGINEERING & SCIENCES, 2022.
+    pdf: https://cdn.techscience.cn/ueditor/files/cmes/134-1/TSP_CMES_20771/TSP_CMES_20771.pdf
+    # code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
+    # page: https://class-il.mpi-inf.mpg.de/mnemonics/
+    bibtex: https://reurl.cc/oVm2QQ
+    # notes: Oral Presentation
+    image: ./assets/img/CMES.png
