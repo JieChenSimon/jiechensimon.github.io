@@ -1,9 +1,0 @@
-@article{chen2023randomly,
-  title={Randomly wired graph neural network for chinese ner},
-  author={Chen, Jie and Xi, Xuefeng and Sheng, Victor S and Cui, Zhiming},
-  journal={Expert Systems with Applications},
-  volume={227},
-  pages={120245},
-  year={2023},
-  publisher={Elsevier}
-}
