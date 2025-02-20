@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-I am a Ph.D. student at Southeast University. I am interested in software testing, smart contract security, vulnerability detection, large language model and interpretability. 
+I am a Ph.D. student at Southeast University. I am interested in software testing, smart contract security, vulnerability detection, large language model, interpretability and natural language processing etc. 
 
 ## Research Interests
 - **Security:** software testing, smart contract security, vulnerability detection
