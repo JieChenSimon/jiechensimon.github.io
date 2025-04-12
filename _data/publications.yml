@@ -4,12 +4,12 @@ main:
     authors: <strong>Jie Chen</strong>, Liangmin Wang, Huijuan Zhu, Victor S. Sheng
     conference_short: AAAI25-Oral
     conference: The Association for the Advancement of Artificial Intelligence <strong>(AAAI 2025 Oral)</strong>, 2025.
-    # pdf: https://arxiv.org/pdf/2306.00988.pdf
+    pdf: https://ojs.aaai.org/index.php/AAAI/article/view/31981
     code: https://github.com/MrGiovanni/ContinualLearning
     bibtex: https://bib.yliu.me/MICCAI23.txt
     rank: CCF-A
     image: ./assets/img/CLEP.png
-    notes: Main Conference-Accepted-TBA
+    notes: Main Conference-Oral
 
   - title: "SmartGuard: Making Prediction Verifiable through Transaction Sequences on Smart Contract Vulnerability Detection."
     authors: <strong>Jie Chen</strong>, Liangmin Wang, Huijuan Zhu, Victor S. Sheng
