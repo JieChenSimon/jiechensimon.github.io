@@ -18,4 +18,5 @@
   <li><a href="https://academic.oup.com/comjnl"><autocolor>The computer journal</autocolor></a></li>
   <li><a href="https://www.sciencedirect.com/journal/knowledge-based-systems"><autocolor>Knowledge-Based Systems (KBS)</autocolor></a></li>
   <li><a href="https://www.journals.elsevier.com/information-sciences"><autocolor>Information Sciences</autocolor></a></li>
+  <li><a href="https://www.sciencedirect.com/journal/expert-systems-with-applications"><autocolor>Expert Systems With Applications (ESWA)</autocolor></a></li>
 </ul>
