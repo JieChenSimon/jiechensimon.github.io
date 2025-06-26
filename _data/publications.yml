@@ -15,12 +15,12 @@ main:
     authors: <strong>Jie Chen</strong>, Liangmin Wang, Huijuan Zhu, Victor S. Sheng
     conference_short: TIFS
     conference: IEEE Transactions on Information Forensics and Security <strong>(TIFS)</strong>, 2024.
-    # pdf: https://arxiv.org/pdf/2306.00988.pdf
+    pdf: https://ieeexplore.ieee.org/document/11037432
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
     rank: CCF-A
-    image: ./assets/img/teaser_example_2.png
-    notes: Under Review
+    image: ./assets/img/SmartGuard.png
+    # notes: Under Review
 
   - title: "Tor Trace in Images: A Novel Multi-tab Website Fingerprinting Attack with Object Detection"
     authors: Yifan Xu, Liangmin Wang, <strong>Jie Chen</strong>, Qiang Zhou
