@@ -12,7 +12,7 @@ main:
     notes: Main Conference-Oral
 
   - title: "SmartGuard: Making Prediction Verifiable through Transaction Sequences on Smart Contract Vulnerability Detection."
-    authors: <strong>Jie Chen</strong>, Liangmin Wang, Huijuan Zhu, Victor S. Sheng
+    authors: <strong>Jie Chen</strong>, Liangmin Wang, Huijuan Zhu
     conference_short: TIFS
     conference: IEEE Transactions on Information Forensics and Security <strong>(TIFS)</strong>, 2024.
     pdf: https://ieeexplore.ieee.org/document/11037432
