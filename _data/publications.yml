@@ -10,6 +10,7 @@ main:
   rank: CCF-A
   image: ./assets/img/SmartGuard.png
   # notes: Under Review
+  
   - title: "CLEP: A Novel Contrastive Learning Method for Evolutionary Reentrancy Vulnerability Detection"
     authors: <strong>Jie Chen</strong>, Liangmin Wang, Huijuan Zhu, Victor S. Sheng
     conference_short: AAAI 2025-Oral
@@ -20,7 +21,6 @@ main:
     rank: CCF-A
     image: ./assets/img/CLEP.png
     notes: Main Conference-Oral
-
 
 
   - title: "Tor Trace in Images: A Novel Multi-tab Website Fingerprinting Attack with Object Detection"
