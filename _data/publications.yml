@@ -1,14 +1,14 @@
 main:
 
   - title: "SmartGuard: Making Prediction Verifiable through Transaction Sequences on Smart Contract Vulnerability Detection."
-  authors: <strong>Jie Chen</strong>, Liangmin Wang, Huijuan Zhu
-  conference_short: TIFS
-  conference: IEEE Transactions on Information Forensics and Security <strong>(TIFS)</strong>, 2025.
-  pdf: https://ieeexplore.ieee.org/document/11037432
-  # code: https://github.com/MrGiovanni/ContinualLearning
-  # bibtex: https://bib.yliu.me/MICCAI23.txt
-  rank: CCF-A
-  image: ./assets/img/SmartGuard.png
+    authors: <strong>Jie Chen</strong>, Liangmin Wang, Huijuan Zhu
+    conference_short: TIFS
+    conference: IEEE Transactions on Information Forensics and Security <strong>(TIFS)</strong>, 2025.
+    pdf: https://ieeexplore.ieee.org/document/11037432
+    # code: https://github.com/MrGiovanni/ContinualLearning
+    # bibtex: https://bib.yliu.me/MICCAI23.txt
+    rank: CCF-A
+    image: ./assets/img/SmartGuard.png
   # notes: Under Review
   
   - title: "CLEP: A Novel Contrastive Learning Method for Evolutionary Reentrancy Vulnerability Detection"
