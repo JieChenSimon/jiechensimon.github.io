@@ -1,0 +1,93 @@
+name: Update Scholar citation counts
+
+on:
+  schedule:
+    - cron: '0 1 * * *'  # 09:00 Beijing time, daily
+  workflow_dispatch:      # allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update-citations:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Fetch Google Scholar citations via SerpAPI
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: |
+          python3 - <<'PYEOF'
+          import json, os, re, sys, urllib.request, urllib.parse
+          from datetime import datetime, timezone, timedelta
+
+          api_key = os.environ.get("SERPAPI_KEY", "")
+          if not api_key:
+              print("SERPAPI_KEY is not set", file=sys.stderr)
+              sys.exit(1)
+
+          params = urllib.parse.urlencode({
+              "engine": "google_scholar_author",
+              "author_id": "29wfilcAAAAJ",
+              "api_key": api_key,
+              "hl": "en",
+              "num": 100,
+          })
+          req = urllib.request.Request(
+              "https://serpapi.com/search.json?" + params,
+              headers={"User-Agent": "Mozilla/5.0"},
+          )
+          try:
+              with urllib.request.urlopen(req, timeout=60) as r:
+                  data = json.load(r)
+          except Exception as e:
+              print(f"SerpAPI request failed: {e}", file=sys.stderr)
+              sys.exit(1)
+
+          if "articles" not in data:
+              print(f"Unexpected SerpAPI response: {str(data)[:200]}", file=sys.stderr)
+              sys.exit(1)
+
+          counts = {}
+          for a in data["articles"]:
+              cid = a.get("citation_id")
+              cb = a.get("cited_by")
+              v = cb.get("value") if isinstance(cb, dict) else cb
+              counts[cid] = v if isinstance(v, int) else 0
+
+          with open("index.html", encoding="utf-8") as f:
+              html = f.read()
+
+          datestr = (datetime.now(timezone.utc) + timedelta(hours=8)).strftime("%b %Y")
+
+          def repl(m):
+              cid = m.group(1)
+              n = counts.get(cid, 0)
+              return (f'<span class="cite-badge" data-scholar-id="{cid}" '
+                      f'title="Citations from Google Scholar, updated {datestr}">Cited by {n}</span>')
+
+          html_new, n = re.subn(
+              r'<span class="cite-badge" data-scholar-id="([^"]+)"[^>]*>Cited by \d+</span>',
+              repl, html)
+          if n == 0:
+              print("No citation badges found in index.html", file=sys.stderr)
+              sys.exit(1)
+
+          html_new = re.sub(r"\(updated [A-Z][a-z]+ \d{4}\)", f"(updated {datestr})", html_new)
+
+          with open("index.html", "w", encoding="utf-8") as f:
+              f.write(html_new)
+          print(f"Updated {n} citation badges ({datestr})")
+          PYEOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --staged --quiet || git commit -m "chore: update Google Scholar citation counts"
+          git push
