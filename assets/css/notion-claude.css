@@ -265,3 +265,14 @@ section p small {
     margin-bottom: 12px;
   }
 }
+
+/* 移动端：Scholar 卡片居中 + 统计标签不换行 */
+@media screen and (max-width: 720px) {
+  .scholar-chart {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .scholar-stats > div {
+    white-space: nowrap;
+  }
+}
