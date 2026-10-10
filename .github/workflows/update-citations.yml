@@ -97,19 +97,30 @@ jobs:
 
           table = (cited_by.get("table") or [{}])[0]
           def _pick(d, *keys):
+              # 兼容 {"all": N} / {"since_2021": N} / 直接数字 多种格式
+              if isinstance(d, int):
+                  return d
               for k in keys:
                   v = (d or {}).get(k)
                   if isinstance(v, dict):
-                      v = v.get("all", v.get("since_2021"))
+                      for sk in ("all", "since_2021", "since_2020"):
+                          if isinstance(v.get(sk), int):
+                              return v[sk]
                   if isinstance(v, int):
                       return v
               return 0
 
+          # table 可能是 {"citations": {...}, "h_index": {...}} 或列表形式
+          if isinstance(table, dict):
+              t_cit, t_h, t_i10 = table.get("citations"), table.get("h_index"), table.get("i10_index")
+          else:
+              t_cit = t_h = t_i10 = None
+
           out = {
               "updated": datestr,
-              "citations": _pick(table.get("citations"), "all"),
-              "h_index": _pick(table.get("h_index"), "all"),
-              "i10_index": _pick(table.get("i10_index"), "all"),
+              "citations": _pick(t_cit, "all"),
+              "h_index": _pick(t_h, "all"),
+              "i10_index": _pick(t_i10, "all"),
               "graph": graph,
           }
           with open("assets/scholar_graph.json", "w", encoding="utf-8") as f:
