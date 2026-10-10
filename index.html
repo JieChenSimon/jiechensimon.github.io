@@ -89,7 +89,7 @@
       border-radius: 4px 4px 0 0;
       min-height: 2px;
     }
-    /* 徽章行：蓝徽章与描边按钮统一高度、垂直居中 */
+    /* 徽章行：统一样式（同高/同圆角/同字号），按类型配色 */
     .publications ol.bibliography li .links .cite-badge,
     .publications ol.bibliography li .links a.btn {
       display: inline-flex;
@@ -97,11 +97,27 @@
       justify-content: center;
       box-sizing: border-box;
       height: 24px;
+      padding: 0 10px;
+      font-size: 12px;
+      font-weight: 600;
       line-height: 1;
-      padding-top: 0;
-      padding-bottom: 0;
+      border-radius: 6px;
+      border: none;
+      white-space: nowrap;
       vertical-align: middle;
+      text-decoration: none;
+      margin: 0 6px 6px 0;
+      color: #fff;
     }
+    .publications ol.bibliography li .links .cite-badge { background-color: #4285f4; }
+    .publications ol.bibliography li .links a.btn:hover { color: #fff; text-decoration: none; filter: brightness(1.08); }
+    .badge-ccf-a { background-color: #7c3aed; }
+    .badge-ccf-b { background-color: #6366f1; }
+    .badge-jcr-q1 { background-color: #0d9488; }
+    .badge-pdf { background-color: #dc2626; }
+    .badge-code { background-color: #24292f; }
+    .badge-project-page { background-color: #16a34a; }
+    .badge-bibtex { background-color: #64748b; }
     /* X 图标视觉尺寸与其他图标对齐（FA6 字形偏小） */
     .social-icons .fa-x-twitter { font-size: 1.22em; }
     .scholar-bars .bar-year {
@@ -208,6 +224,17 @@
             })
             .catch(function() { /* 静默失败，不显示图表 */ });
         })();
+        document.addEventListener('DOMContentLoaded', function() {
+          var map = {
+            'ccf-a': 'badge-ccf-a', 'ccf-b': 'badge-ccf-b', 'jcr-q1': 'badge-jcr-q1',
+            'pdf': 'badge-pdf', 'code': 'badge-code',
+            'project-page': 'badge-project-page', 'bibtex': 'badge-bibtex'
+          };
+          document.querySelectorAll('.publications .links a.btn').forEach(function(a) {
+            var key = a.textContent.trim().toLowerCase().replace(/\s+/g, '-');
+            if (map[key]) a.classList.add(map[key]);
+          });
+        });
         </script>
 
       </header>
