@@ -29,20 +29,19 @@
     <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
 
     <style>
-    /* Google Scholar 引用趋势图（侧边栏） */
+    /* Google Scholar 引用趋势（侧边栏，与站点配色统一：藏青 #043361 + 链接蓝 #39c） */
     .scholar-chart {
-      margin: 12px 0 4px 0;
-      padding: 12px 10px 8px 10px;
-      border: 1px solid #e8e8e8;
-      border-radius: 8px;
-      background: #fafafa;
-      max-width: 240px;
+      margin: 10px 0 0 0;
+      max-width: 230px;
+      font-size: 12px;
+      color: #595959;
     }
     .scholar-chart-title {
       font-size: 12px;
-      font-weight: 700;
-      color: #333;
-      margin-bottom: 8px;
+      font-weight: 600;
+      color: #043361;
+      margin-bottom: 6px;
+      letter-spacing: 0.02em;
     }
     .scholar-chart-title .scholar-updated {
       font-weight: 400;
@@ -51,27 +50,29 @@
     }
     .scholar-stats {
       display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-      text-align: center;
+      margin-bottom: 8px;
+    }
+    .scholar-stats > div {
+      margin-right: 16px;
+    }
+    .scholar-stats > div:last-child {
+      margin-right: 0;
     }
     .scholar-stats .stat-num {
-      display: block;
-      font-size: 16px;
-      font-weight: 700;
-      color: #1a73e8;
+      font-size: 15px;
+      font-weight: 600;
+      color: #043361;
+      margin-right: 4px;
     }
     .scholar-stats .stat-label {
-      font-size: 10px;
+      font-size: 11px;
       color: #777;
     }
     .scholar-bars {
       display: flex;
       align-items: flex-end;
-      justify-content: space-around;
-      height: 90px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 2px;
+      height: 62px;
+      border-bottom: 1px solid #e2e2e2;
     }
     .scholar-bars .bar-col {
       display: flex;
@@ -82,20 +83,20 @@
       flex: 1;
     }
     .scholar-bars .bar-val {
-      font-size: 10px;
-      color: #555;
+      font-size: 9px;
+      color: #999;
       margin-bottom: 2px;
     }
     .scholar-bars .bar {
-      width: 70%;
-      max-width: 28px;
-      background: #9aa0a6;
-      border-radius: 2px 2px 0 0;
-      min-height: 3px;
+      width: 12px;
+      background: #39c;
+      opacity: 0.8;
+      border-radius: 1px 1px 0 0;
+      min-height: 2px;
     }
     .scholar-bars .bar-year {
-      font-size: 10px;
-      color: #777;
+      font-size: 9px;
+      color: #999;
       margin-top: 3px;
     }
     </style>
@@ -162,11 +163,11 @@
         </div>
         <br>
 
-        <!-- Google Scholar 引用趋势图 -->
+        <!-- Google Scholar 引用趋势 -->
         <div class="scholar-chart" id="scholar-chart" style="display:none;">
-          <div class="scholar-chart-title">📊 Google Scholar <span class="scholar-updated" id="scholar-updated"></span></div>
+          <div class="scholar-chart-title">Google Scholar <span class="scholar-updated" id="scholar-updated"></span></div>
           <div class="scholar-stats">
-            <div><span class="stat-num" id="stat-citations">-</span><span class="stat-label">Citations</span></div>
+            <div><span class="stat-num" id="stat-citations">-</span><span class="stat-label">citations</span></div>
             <div><span class="stat-num" id="stat-hindex">-</span><span class="stat-label">h-index</span></div>
             <div><span class="stat-num" id="stat-i10">-</span><span class="stat-label">i10-index</span></div>
           </div>
