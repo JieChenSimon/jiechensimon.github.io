@@ -86,6 +86,11 @@ jobs:
           # 保存按年引用数据，供首页引用趋势图使用
           graph = []
           cited_by = data.get("cited_by", {})
+          print(f"DEBUG cited_by keys: {list(cited_by.keys())}", file=sys.stderr)
+          tbl = cited_by.get("table")
+          print(f"DEBUG table type: {type(tbl).__name__}, len: {len(tbl) if isinstance(tbl, list) else 'n/a'}", file=sys.stderr)
+          if isinstance(tbl, list) and tbl:
+              print(f"DEBUG table[0] keys: {list(tbl[0].keys()) if isinstance(tbl[0], dict) else type(tbl[0])}", file=sys.stderr)
           for g in cited_by.get("graph", []) or []:
               try:
                   graph.append({"year": int(g["year"]), "citations": int(g["citations"])})
