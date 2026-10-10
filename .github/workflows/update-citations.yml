@@ -86,11 +86,6 @@ jobs:
           # 保存按年引用数据，供首页引用趋势图使用
           graph = []
           cited_by = data.get("cited_by", {})
-          print(f"DEBUG cited_by keys: {list(cited_by.keys())}", file=sys.stderr)
-          tbl = cited_by.get("table")
-          print(f"DEBUG table type: {type(tbl).__name__}, len: {len(tbl) if isinstance(tbl, list) else 'n/a'}", file=sys.stderr)
-          if isinstance(tbl, list) and tbl:
-              print(f"DEBUG table[0] keys: {list(tbl[0].keys()) if isinstance(tbl[0], dict) else type(tbl[0])}", file=sys.stderr)
           for g in cited_by.get("graph", []) or []:
               try:
                   graph.append({"year": int(g["year"]), "citations": int(g["citations"])})
@@ -100,7 +95,6 @@ jobs:
           # 只保留近 8 年，避免图表过宽
           graph = [g for g in graph if g["citations"] > 0][-8:]
 
-          table = (cited_by.get("table") or [{}])[0]
           def _pick(d, *keys):
               # 兼容 {"all": N} / {"since_2021": N} / 直接数字 多种格式
               if isinstance(d, int):
@@ -115,17 +109,20 @@ jobs:
                       return v
               return 0
 
-          # table 可能是 {"citations": {...}, "h_index": {...}} 或列表形式
-          if isinstance(table, dict):
-              t_cit, t_h, t_i10 = table.get("citations"), table.get("h_index"), table.get("i10_index")
-          else:
-              t_cit = t_h = t_i10 = None
+          # table 可能是单行全指标，或每个指标一行，合并查找
+          def _find_metric(name):
+              for row in cited_by.get("table") or []:
+                  if isinstance(row, dict) and name in row:
+                      v = _pick(row[name], "all")
+                      if v:
+                          return v
+              return 0
 
           out = {
               "updated": datestr,
-              "citations": _pick(t_cit, "all"),
-              "h_index": _pick(t_h, "all"),
-              "i10_index": _pick(t_i10, "all"),
+              "citations": _find_metric("citations"),
+              "h_index": _find_metric("h_index"),
+              "i10_index": _find_metric("i10_index"),
               "graph": graph,
           }
           with open("assets/scholar_graph.json", "w", encoding="utf-8") as f:
