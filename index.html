@@ -27,7 +27,78 @@
     
     <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css">
     <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
-    
+
+    <style>
+    /* Google Scholar 引用趋势图（侧边栏） */
+    .scholar-chart {
+      margin: 12px 0 4px 0;
+      padding: 12px 10px 8px 10px;
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      background: #fafafa;
+      max-width: 240px;
+    }
+    .scholar-chart-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 8px;
+    }
+    .scholar-chart-title .scholar-updated {
+      font-weight: 400;
+      color: #999;
+      font-size: 11px;
+    }
+    .scholar-stats {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .scholar-stats .stat-num {
+      display: block;
+      font-size: 16px;
+      font-weight: 700;
+      color: #1a73e8;
+    }
+    .scholar-stats .stat-label {
+      font-size: 10px;
+      color: #777;
+    }
+    .scholar-bars {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      height: 90px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 2px;
+    }
+    .scholar-bars .bar-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      height: 100%;
+      flex: 1;
+    }
+    .scholar-bars .bar-val {
+      font-size: 10px;
+      color: #555;
+      margin-bottom: 2px;
+    }
+    .scholar-bars .bar {
+      width: 70%;
+      max-width: 28px;
+      background: #9aa0a6;
+      border-radius: 2px 2px 0 0;
+      min-height: 3px;
+    }
+    .scholar-bars .bar-year {
+      font-size: 10px;
+      color: #777;
+      margin-top: 3px;
+    }
+    </style>
 
   </head>
   <body>
@@ -90,6 +161,43 @@
         
         </div>
         <br>
+
+        <!-- Google Scholar 引用趋势图 -->
+        <div class="scholar-chart" id="scholar-chart" style="display:none;">
+          <div class="scholar-chart-title">📊 Google Scholar <span class="scholar-updated" id="scholar-updated"></span></div>
+          <div class="scholar-stats">
+            <div><span class="stat-num" id="stat-citations">-</span><span class="stat-label">Citations</span></div>
+            <div><span class="stat-num" id="stat-hindex">-</span><span class="stat-label">h-index</span></div>
+            <div><span class="stat-num" id="stat-i10">-</span><span class="stat-label">i10-index</span></div>
+          </div>
+          <div class="scholar-bars" id="scholar-bars"></div>
+        </div>
+        <script>
+        (function() {
+          fetch('./assets/scholar_graph.json')
+            .then(function(r) { return r.json(); })
+            .then(function(d) {
+              if (!d || !d.graph || !d.graph.length) return;
+              document.getElementById('scholar-chart').style.display = 'block';
+              document.getElementById('stat-citations').textContent = d.citations;
+              document.getElementById('stat-hindex').textContent = d.h_index;
+              document.getElementById('stat-i10').textContent = d.i10_index;
+              document.getElementById('scholar-updated').textContent = '(' + d.updated + ')';
+              var max = Math.max.apply(null, d.graph.map(function(g) { return g.citations; }));
+              var bars = document.getElementById('scholar-bars');
+              d.graph.forEach(function(g) {
+                var col = document.createElement('div');
+                col.className = 'bar-col';
+                var h = max > 0 ? Math.round(g.citations / max * 100) : 0;
+                col.innerHTML = '<span class="bar-val">' + g.citations + '</span>' +
+                  '<div class="bar" style="height:' + h + '%"></div>' +
+                  '<span class="bar-year">' + g.year + '</span>';
+                bars.appendChild(col);
+              });
+            })
+            .catch(function() { /* 静默失败，不显示图表 */ });
+        })();
+        </script>
 
       </header>
       <section>
